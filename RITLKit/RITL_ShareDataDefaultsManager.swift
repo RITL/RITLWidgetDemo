@@ -1,5 +1,5 @@
 //
-//  RITL_UserDefaultsManager.swift
+//  RITL_ShareDataDefaultsManager.swift
 //  WidgetTest
 //
 //  Created by YueWen on 16/9/20.
@@ -14,7 +14,7 @@ import UIKit
 
 
 /// 负责使用Group中的userDefault进行数据的共享类
-class RITL_UserDefaultsManager: NSObject
+class RITL_ShareDataDefaultsManager: NSObject
 {
     //组名
     private static let groupIdentifier : String = "group.com.yue.WidgetTest"
@@ -27,7 +27,7 @@ class RITL_UserDefaultsManager: NSObject
     open class func saveData(_ value : String)
     {
         //保存数据
-        __userDefault().set(value, forKey: RITL_UserDefaultsManager.defaultKey)
+        __userDefault().set(value, forKey: RITL_ShareDataDefaultsManager.defaultKey)
     }
 
     
@@ -35,7 +35,9 @@ class RITL_UserDefaultsManager: NSObject
     open class func getData() -> String!
     {
         //如果值为nil,表示没有存过值，返回默认的值
-        let value = (__userDefault().value(forKey: RITL_UserDefaultsManager.defaultKey))
+        let value = (__userDefault().value(forKey: RITL_ShareDataDefaultsManager.defaultKey))
+        
+        __userDefault().synchronize()
         
         guard value == nil else {
             
@@ -49,7 +51,8 @@ class RITL_UserDefaultsManager: NSObject
     /// 清除数据
     open class func clearData()
     {
-        __userDefault().removeSuite(named: RITL_UserDefaultsManager.groupIdentifier)
+        __userDefault().removeSuite(named: RITL_ShareDataDefaultsManager.groupIdentifier)
+        __userDefault().synchronize()
     }
     
     
@@ -57,7 +60,7 @@ class RITL_UserDefaultsManager: NSObject
     /// 获得userDefualtFile
     private class func __userDefault() -> UserDefaults
     {
-        return UserDefaults(suiteName: RITL_UserDefaultsManager.groupIdentifier)!
+        return UserDefaults(suiteName: RITL_ShareDataDefaultsManager.groupIdentifier)!
     }
     
 }

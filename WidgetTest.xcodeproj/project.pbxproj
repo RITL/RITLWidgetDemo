@@ -7,29 +7,119 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB3824A41D90C4470012C30D /* RITL_ShareDataDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3824A31D90C4470012C30D /* RITL_ShareDataDefaultsManager.swift */; };
+		DB3824A61D90C9FA0012C30D /* RITL_ShareDataFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3824A51D90C9FA0012C30D /* RITL_ShareDataFileManager.swift */; };
+		DB8395C81D8FBDE100772102 /* RITL_Framework_Swift_Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8395C71D8FBDE100772102 /* RITL_Framework_Swift_Object.swift */; };
+		DB8395C91D8FBEB100772102 /* RITL_FrameWork_Object.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8395C31D8FB52200772102 /* RITL_FrameWork_Object.m */; };
+		DB8395CA1D8FBEC300772102 /* RITLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB043A41D8E8963009A7564 /* RITLKit.framework */; };
 		DBB043301D8E3238009A7564 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB0432F1D8E3238009A7564 /* main.m */; };
-		DBB043331D8E3238009A7564 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB043321D8E3238009A7564 /* AppDelegate.m */; };
-		DBB043361D8E3238009A7564 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB043351D8E3238009A7564 /* ViewController.m */; };
+		DBB043331D8E3238009A7564 /* RITLWidgetAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB043321D8E3238009A7564 /* RITLWidgetAppDelegate.m */; };
+		DBB043361D8E3238009A7564 /* RITLWidgetMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB043351D8E3238009A7564 /* RITLWidgetMainViewController.m */; };
 		DBB043391D8E3238009A7564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB043371D8E3238009A7564 /* Main.storyboard */; };
 		DBB0433B1D8E3238009A7564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB0433A1D8E3238009A7564 /* Assets.xcassets */; };
 		DBB0433E1D8E3238009A7564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB0433C1D8E3238009A7564 /* LaunchScreen.storyboard */; };
+		DBB0434C1D8E329F009A7564 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB0434B1D8E329F009A7564 /* NotificationCenter.framework */; };
+		DBB043501D8E329F009A7564 /* RITLWidgetTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB0434F1D8E329F009A7564 /* RITLWidgetTodayViewController.m */; };
+		DBB043531D8E329F009A7564 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB043511D8E329F009A7564 /* MainInterface.storyboard */; };
+		DBB043571D8E329F009A7564 /* WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DBB043491D8E329F009A7564 /* WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DBB043601D8E64BD009A7564 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0435F1D8E64BD009A7564 /* TextViewController.swift */; };
+		DBB043A81D8E8963009A7564 /* RITLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DBB043A61D8E8963009A7564 /* RITLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBB043AB1D8E8963009A7564 /* RITLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB043A41D8E8963009A7564 /* RITLKit.framework */; };
+		DBB043AD1D8E8963009A7564 /* RITLKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBB043A41D8E8963009A7564 /* RITLKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DBB043551D8E329F009A7564 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBB043231D8E3238009A7564 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBB043481D8E329F009A7564;
+			remoteInfo = WidgetExtension;
+		};
+		DBB043A91D8E8963009A7564 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBB043231D8E3238009A7564 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBB043A31D8E8963009A7564;
+			remoteInfo = RITLKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DBB0435B1D8E329F009A7564 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DBB043571D8E329F009A7564 /* WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBB043AC1D8E8963009A7564 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DBB043AD1D8E8963009A7564 /* RITLKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DB3824A31D90C4470012C30D /* RITL_ShareDataDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RITL_ShareDataDefaultsManager.swift; sourceTree = "<group>"; };
+		DB3824A51D90C9FA0012C30D /* RITL_ShareDataFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RITL_ShareDataFileManager.swift; sourceTree = "<group>"; };
+		DB8395C21D8FB52200772102 /* RITL_FrameWork_Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITL_FrameWork_Object.h; sourceTree = "<group>"; };
+		DB8395C31D8FB52200772102 /* RITL_FrameWork_Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITL_FrameWork_Object.m; sourceTree = "<group>"; };
+		DB8395C71D8FBDE100772102 /* RITL_Framework_Swift_Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RITL_Framework_Swift_Object.swift; sourceTree = "<group>"; };
 		DBB0432B1D8E3238009A7564 /* WidgetTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB0432F1D8E3238009A7564 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DBB043311D8E3238009A7564 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DBB043321D8E3238009A7564 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DBB043341D8E3238009A7564 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DBB043351D8E3238009A7564 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DBB043311D8E3238009A7564 /* RITLWidgetAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RITLWidgetAppDelegate.h; sourceTree = "<group>"; };
+		DBB043321D8E3238009A7564 /* RITLWidgetAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RITLWidgetAppDelegate.m; sourceTree = "<group>"; };
+		DBB043341D8E3238009A7564 /* RITLWidgetMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RITLWidgetMainViewController.h; sourceTree = "<group>"; };
+		DBB043351D8E3238009A7564 /* RITLWidgetMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RITLWidgetMainViewController.m; sourceTree = "<group>"; };
 		DBB043381D8E3238009A7564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBB0433A1D8E3238009A7564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBB0433D1D8E3238009A7564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBB0433F1D8E3238009A7564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBB043491D8E329F009A7564 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBB0434B1D8E329F009A7564 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		DBB0434E1D8E329F009A7564 /* RITLWidgetTodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RITLWidgetTodayViewController.h; sourceTree = "<group>"; };
+		DBB0434F1D8E329F009A7564 /* RITLWidgetTodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RITLWidgetTodayViewController.m; sourceTree = "<group>"; };
+		DBB043521D8E329F009A7564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		DBB043541D8E329F009A7564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBB0435C1D8E34B6009A7564 /* WidgetTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetTest.entitlements; sourceTree = "<group>"; };
+		DBB0435D1D8E34BD009A7564 /* WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetExtension.entitlements; sourceTree = "<group>"; };
+		DBB0435E1D8E64BD009A7564 /* WidgetTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WidgetTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		DBB0435F1D8E64BD009A7564 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		DBB043A41D8E8963009A7564 /* RITLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RITLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBB043A61D8E8963009A7564 /* RITLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RITLKit.h; sourceTree = "<group>"; };
+		DBB043A71D8E8963009A7564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DBB043281D8E3238009A7564 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBB043AB1D8E8963009A7564 /* RITLKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBB043461D8E329F009A7564 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB8395CA1D8FBEC300772102 /* RITLKit.framework in Frameworks */,
+				DBB0434C1D8E329F009A7564 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBB043A01D8E8963009A7564 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				DBB0432D1D8E3238009A7564 /* WidgetTest */,
+				DBB0434D1D8E329F009A7564 /* WidgetExtension */,
+				DBB043A51D8E8963009A7564 /* RITLKit */,
+				DBB0434A1D8E329F009A7564 /* Frameworks */,
 				DBB0432C1D8E3238009A7564 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				DBB0432B1D8E3238009A7564 /* WidgetTest.app */,
+				DBB043491D8E329F009A7564 /* WidgetExtension.appex */,
+				DBB043A41D8E8963009A7564 /* RITLKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,15 +153,18 @@
 		DBB0432D1D8E3238009A7564 /* WidgetTest */ = {
 			isa = PBXGroup;
 			children = (
-				DBB043311D8E3238009A7564 /* AppDelegate.h */,
-				DBB043321D8E3238009A7564 /* AppDelegate.m */,
-				DBB043341D8E3238009A7564 /* ViewController.h */,
-				DBB043351D8E3238009A7564 /* ViewController.m */,
+				DBB0435C1D8E34B6009A7564 /* WidgetTest.entitlements */,
+				DBB043311D8E3238009A7564 /* RITLWidgetAppDelegate.h */,
+				DBB043321D8E3238009A7564 /* RITLWidgetAppDelegate.m */,
+				DBB043341D8E3238009A7564 /* RITLWidgetMainViewController.h */,
+				DBB043351D8E3238009A7564 /* RITLWidgetMainViewController.m */,
 				DBB043371D8E3238009A7564 /* Main.storyboard */,
 				DBB0433A1D8E3238009A7564 /* Assets.xcassets */,
 				DBB0433C1D8E3238009A7564 /* LaunchScreen.storyboard */,
 				DBB0433F1D8E3238009A7564 /* Info.plist */,
 				DBB0432E1D8E3238009A7564 /* Supporting Files */,
+				DBB0435F1D8E64BD009A7564 /* TextViewController.swift */,
+				DBB0435E1D8E64BD009A7564 /* WidgetTest-Bridging-Header.h */,
 			);
 			path = WidgetTest;
 			sourceTree = "<group>";
@@ -79,7 +177,52 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DBB0434A1D8E329F009A7564 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBB0434B1D8E329F009A7564 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBB0434D1D8E329F009A7564 /* WidgetExtension */ = {
+			isa = PBXGroup;
+			children = (
+				DBB0435D1D8E34BD009A7564 /* WidgetExtension.entitlements */,
+				DBB0434E1D8E329F009A7564 /* RITLWidgetTodayViewController.h */,
+				DBB0434F1D8E329F009A7564 /* RITLWidgetTodayViewController.m */,
+				DBB043511D8E329F009A7564 /* MainInterface.storyboard */,
+				DBB043541D8E329F009A7564 /* Info.plist */,
+			);
+			path = WidgetExtension;
+			sourceTree = "<group>";
+		};
+		DBB043A51D8E8963009A7564 /* RITLKit */ = {
+			isa = PBXGroup;
+			children = (
+				DBB043A61D8E8963009A7564 /* RITLKit.h */,
+				DB8395C21D8FB52200772102 /* RITL_FrameWork_Object.h */,
+				DB8395C31D8FB52200772102 /* RITL_FrameWork_Object.m */,
+				DB8395C71D8FBDE100772102 /* RITL_Framework_Swift_Object.swift */,
+				DBB043A71D8E8963009A7564 /* Info.plist */,
+				DB3824A31D90C4470012C30D /* RITL_ShareDataDefaultsManager.swift */,
+				DB3824A51D90C9FA0012C30D /* RITL_ShareDataFileManager.swift */,
+			);
+			path = RITLKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DBB043A11D8E8963009A7564 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBB043A81D8E8963009A7564 /* RITLKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		DBB0432A1D8E3238009A7564 /* WidgetTest */ = {
@@ -89,15 +232,54 @@
 				DBB043271D8E3238009A7564 /* Sources */,
 				DBB043281D8E3238009A7564 /* Frameworks */,
 				DBB043291D8E3238009A7564 /* Resources */,
+				DBB0435B1D8E329F009A7564 /* Embed App Extensions */,
+				DBB043AC1D8E8963009A7564 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DBB043561D8E329F009A7564 /* PBXTargetDependency */,
+				DBB043AA1D8E8963009A7564 /* PBXTargetDependency */,
 			);
 			name = WidgetTest;
 			productName = WidgetTest;
 			productReference = DBB0432B1D8E3238009A7564 /* WidgetTest.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DBB043481D8E329F009A7564 /* WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBB043581D8E329F009A7564 /* Build configuration list for PBXNativeTarget "WidgetExtension" */;
+			buildPhases = (
+				DBB043451D8E329F009A7564 /* Sources */,
+				DBB043461D8E329F009A7564 /* Frameworks */,
+				DBB043471D8E329F009A7564 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WidgetExtension;
+			productName = WidgetExtension;
+			productReference = DBB043491D8E329F009A7564 /* WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		DBB043A31D8E8963009A7564 /* RITLKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBB043AE1D8E8963009A7564 /* Build configuration list for PBXNativeTarget "RITLKit" */;
+			buildPhases = (
+				DBB0439F1D8E8963009A7564 /* Sources */,
+				DBB043A01D8E8963009A7564 /* Frameworks */,
+				DBB043A11D8E8963009A7564 /* Headers */,
+				DBB043A21D8E8963009A7564 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RITLKit;
+			productName = RITLKit;
+			productReference = DBB043A41D8E8963009A7564 /* RITLKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -111,6 +293,27 @@
 					DBB0432A1D8E3238009A7564 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 8HMFNLUC68;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					DBB043481D8E329F009A7564 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8HMFNLUC68;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					DBB043A31D8E8963009A7564 = {
+						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -129,6 +332,8 @@
 			projectRoot = "";
 			targets = (
 				DBB0432A1D8E3238009A7564 /* WidgetTest */,
+				DBB043481D8E329F009A7564 /* WidgetExtension */,
+				DBB043A31D8E8963009A7564 /* RITLKit */,
 			);
 		};
 /* End PBXProject section */
@@ -144,6 +349,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBB043471D8E329F009A7564 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBB043531D8E329F009A7564 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBB043A21D8E8963009A7564 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -151,13 +371,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBB043361D8E3238009A7564 /* ViewController.m in Sources */,
-				DBB043331D8E3238009A7564 /* AppDelegate.m in Sources */,
+				DBB043361D8E3238009A7564 /* RITLWidgetMainViewController.m in Sources */,
+				DBB043331D8E3238009A7564 /* RITLWidgetAppDelegate.m in Sources */,
 				DBB043301D8E3238009A7564 /* main.m in Sources */,
+				DBB043601D8E64BD009A7564 /* TextViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBB043451D8E329F009A7564 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBB043501D8E329F009A7564 /* RITLWidgetTodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBB0439F1D8E8963009A7564 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB3824A61D90C9FA0012C30D /* RITL_ShareDataFileManager.swift in Sources */,
+				DB8395C91D8FBEB100772102 /* RITL_FrameWork_Object.m in Sources */,
+				DB3824A41D90C4470012C30D /* RITL_ShareDataDefaultsManager.swift in Sources */,
+				DB8395C81D8FBDE100772102 /* RITL_Framework_Swift_Object.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBB043561D8E329F009A7564 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBB043481D8E329F009A7564 /* WidgetExtension */;
+			targetProxy = DBB043551D8E329F009A7564 /* PBXContainerItemProxy */;
+		};
+		DBB043AA1D8E8963009A7564 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBB043A31D8E8963009A7564 /* RITLKit */;
+			targetProxy = DBB043A91D8E8963009A7564 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DBB043371D8E3238009A7564 /* Main.storyboard */ = {
@@ -174,6 +427,14 @@
 				DBB0433D1D8E3238009A7564 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DBB043511D8E329F009A7564 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBB043521D8E329F009A7564 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -270,24 +531,122 @@
 		DBB043431D8E3238009A7564 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = WidgetTest/WidgetTest.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8HMFNLUC68;
 				INFOPLIST_FILE = WidgetTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yue.WidgetTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WidgetTest/WidgetTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		DBB043441D8E3238009A7564 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = WidgetTest/WidgetTest.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8HMFNLUC68;
 				INFOPLIST_FILE = WidgetTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yue.WidgetTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WidgetTest/WidgetTest-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DBB043591D8E329F009A7564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WidgetExtension/WidgetExtension.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8HMFNLUC68;
+				INFOPLIST_FILE = WidgetExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yue.WidgetTest.WidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DBB0435A1D8E329F009A7564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WidgetExtension/WidgetExtension.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8HMFNLUC68;
+				INFOPLIST_FILE = WidgetExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yue.WidgetTest.WidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DBB043AF1D8E8963009A7564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RITLKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yue.RITLKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DBB043B01D8E8963009A7564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RITLKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yue.RITLKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -310,6 +669,25 @@
 				DBB043441D8E3238009A7564 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBB043581D8E329F009A7564 /* Build configuration list for PBXNativeTarget "WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBB043591D8E329F009A7564 /* Debug */,
+				DBB0435A1D8E329F009A7564 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBB043AE1D8E8963009A7564 /* Build configuration list for PBXNativeTarget "RITLKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBB043AF1D8E8963009A7564 /* Debug */,
+				DBB043B01D8E8963009A7564 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

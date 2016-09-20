@@ -9,27 +9,53 @@
 import UIKit
 
 class TextViewController: UIViewController {
+    
+    var headTitle:String?
+    
 
-    override func viewDidLoad() {
+    @IBOutlet private weak var textLabel: UILabel!
+    
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+    }
+    
+
+    convenience init(title:String)
+    {
+        self.init()
+        self.textLabel.text = title
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+
+        super.init(coder: aDecoder);
+        
+    }
+    
+
+    internal override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        textLabel.text = headTitle;
     }
 
-    override func didReceiveMemoryWarning() {
+    internal override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction private func backButtonDidTap(_ sender: AnyObject) {
+        
+        //模态弹回
+        self.dismiss(animated: true) { 
+            
+        }
+        
     }
-    */
-
 }

@@ -10,44 +10,44 @@
 #import "WidgetTest-Swift.h"
 #import "RITL_FrameWork_Object.h"
 
+//导入Swift共享代码
+@import RITLKit;
 
 
 @interface RITLWidgetMainViewController ()
 
-@property (nonatomic, strong) NSTimer * timer;
-@property (nonatomic, assign) NSInteger number;
-@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+/// 负责获取用户信息的文本域
+@property (weak, nonatomic) IBOutlet UITextField *mainTextField;
 
 @end
 
-@implementation ViewController
+
+@implementation RITLWidgetMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    
     __weak typeof(self) weakSelf = self;
 
     //获得失去前台的监听
-    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillResignActiveNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillResignActiveNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {//进行数据的保存
         
-        if (weakSelf.timer == nil)
-        {
-            [weakSelf __clearDefaults];//删除默认
-        }
+        //保存当前的数据
+#ifdef RITL_ShareDataType_UserDefaults
+        //第一种保存数据
+        [RITL_ShareDataDefaultsManager saveData:weakSelf.mainTextField.text];
         
-        
-        else
-        {
-            
-        }
-        
+#else
+        //第二种保存数据
+        [RITL_ShareDataFileManager saveData:weakSelf.mainTextField.text];
+#endif
         
     }];
     
     
     
+    //添加获得拓展打开基础应用的通知
     [[NSNotificationCenter defaultCenter] addObserverForName:@"ExtenicationNotification" object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
        
         //获得类型
@@ -56,70 +56,19 @@
         [weakSelf presentTextController:type];
         
     }];
-
     
-    // iOS 10 之后的block方法
-    self.timer = [NSTimer timerWithTimeInterval:1.0 repeats:true block:^(NSTimer * _Nonnull timer) {
-       
-        //number++
-        weakSelf.number ++;
-        weakSelf.timeLabel.text = [NSString stringWithFormat:@"%ld",(long)weakSelf.number];
-        
-        
-    }];
+    
+    //add tapGestureRecognizer
+    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(__tapGestureRecognizerAction)]];
+    
 }
 
 
-
-//private function
-- (void)__applicationWillResignActive
+- (void)__tapGestureRecognizerAction
 {
-    if (_timer == nil)
-    {
-        [self __clearDefaults];//删除默认
-    }
-    
-    
-    else
-    {
-        if (!_timer.valid)
-        {
-            [self __saveDefaults];
-        }
-        
-        else
-        {
-            [self __clearDefaults];
-        }
-    }
+    [self.mainTextField resignFirstResponder];
 }
 
-
-- (void)__saveDefaults
-{
-    //创建UserDefault
-    NSUserDefaults * userDefault = [[NSUserDefaults alloc]initWithSuiteName:@"group.com.yue.WidgetTest"];
-    
-    
-    [userDefault setInteger:1 forKey:@"com.yue.WidgetTest.defaultTime"];
-    [userDefault setInteger:self.number forKey:@"com.yue.WidgetTest.currentTime"];
-    
-    //加锁
-    [userDefault synchronize];
-}
-
-
-- (void)__clearDefaults
-{
-    //获得userDefault
-    NSUserDefaults * userDefault = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.yue.WidgetTest"];
-    
-    //移除数据
-    [userDefault removeObjectForKey:@"com.yue.WidgetTest.defaultTime"];
-    [userDefault removeObjectForKey:@"com.yue.WidgetTest.currentTime"];
-    
-    [userDefault synchronize];
-}
 
 
 - (void)didReceiveMemoryWarning {
@@ -134,40 +83,39 @@
 }
 
 
-#pragma mark - Button Action
+#pragma mark - present Button Action
 
 
 - (IBAction)firstButtonDidTap:(id)sender
 {
-    NSLog(@"first");
     [self presentTextController:@"First"];
 }
 
 
 - (IBAction)secondButtonDidTap:(id)sender
 {
-    NSLog(@"second");
     [self presentTextController:@"Second"];
 }
 
 
 - (IBAction)thirdButtonDidTap:(id)sender
 {
-    NSLog(@"third");
     [self presentTextController:@"Third"];
 }
 
 - (IBAction)fourButtonDidTap:(id)sender
 {
-    NSLog(@"forth");
     [self presentTextController:@"Four"];
 }
 
 
 - (void)presentTextController:(NSString *)title
 {
+    
+    //shared coding ..
     [RITL_FrameWork_Object sayHello];
-
+    [RITL_Framework_Swift_Object sayHello];
+    
     TextViewController * viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"TextViewController"];
     
     viewController.headTitle = title;
@@ -175,20 +123,20 @@
 }
 
 
+#pragma mark - clear data Action
 
-- (IBAction)startButtonDidTap:(id)sender
+- (IBAction)clearButtonDidTap:(id)sender
 {
-    //开启计时器
-    if (_timer.isValid)
-    {
-        [_timer fire];
-    }
+#ifdef RITL_ShareDataType_UserDefaults
+    //第一种
+    [RITL_ShareDataDefaultsManager clearData];
+#else
+    //第二种
+    [RITL_ShareDataFileManager clearData];
+#endif
 }
 
 
-- (IBAction)stopButtonDidTap:(id)sender
-{
-    [_timer invalidate];
-}
+
 
 @end

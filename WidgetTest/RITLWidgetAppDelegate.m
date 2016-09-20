@@ -8,7 +8,6 @@
 
 #import "RITLWidgetAppDelegate.h"
 
-
 @interface RITLWidgetAppDelegate ()
 
 @end

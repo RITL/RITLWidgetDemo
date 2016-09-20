@@ -8,6 +8,11 @@
 
 import UIKit
 
+/// SWift共享的代码
 class RITL_Framework_Swift_Object: NSObject {
 
+    public class func sayHello()
+    {
+        print("SWift共享的代码 说Hello")
+    }
 }

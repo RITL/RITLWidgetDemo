@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+/// ObjC 进行共享的代码
 @interface RITL_FrameWork_Object : NSObject
 
 @property (nonatomic, copy) NSString * name;
-
 
 + (void)sayHello;
 

@@ -12,7 +12,7 @@
 
 +(void)sayHello
 {
-    NSLog(@"hello");
+    NSLog(@"ObjC 进行共享的代码 说: hello");
 }
 
 @end
