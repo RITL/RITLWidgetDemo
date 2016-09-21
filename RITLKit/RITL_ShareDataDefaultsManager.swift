@@ -28,6 +28,7 @@ class RITL_ShareDataDefaultsManager: NSObject
     {
         //保存数据
         __userDefault().set(value, forKey: RITL_ShareDataDefaultsManager.defaultKey)
+        __userDefault().synchronize()
     }
 
     
