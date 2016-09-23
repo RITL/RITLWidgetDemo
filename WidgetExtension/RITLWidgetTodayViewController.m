@@ -36,6 +36,13 @@
     //reload data
     [self uploadData];
     
+    
+    
+#ifdef __IPHONE_10_0
+    //如果需要折叠
+    self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded;
+#endif
+    
 }
 
 
@@ -106,7 +113,7 @@
         //如果是展开的高度
         case NCWidgetDisplayModeExpanded:
         {
-            self.preferredContentSize = CGSizeMake(0, 400);
+            self.preferredContentSize = CGSizeMake(0, 800);
         }
         break;
     }
