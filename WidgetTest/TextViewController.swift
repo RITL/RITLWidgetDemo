@@ -10,41 +10,38 @@ import UIKit
 
 class TextViewController: UIViewController {
     
-    var headTitle:String?
+    @objc(headTitle)
+    var headTitle:String? {
+        willSet {
+            textLabel.text = newValue
+        }
+    }
     
-
     @IBOutlet private weak var textLabel: UILabel!
     
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
     }
     
 
-    convenience init(title:String)
-    {
+    convenience init(title:String){
         self.init()
         self.textLabel.text = title
     }
     
     required init?(coder aDecoder: NSCoder) {
-
         super.init(coder: aDecoder);
-        
     }
     
-
-    internal override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         textLabel.text = headTitle;
     }
 
-    internal override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -53,9 +50,6 @@ class TextViewController: UIViewController {
     @IBAction private func backButtonDidTap(_ sender: AnyObject) {
         
         //模态弹回
-        self.dismiss(animated: true) { 
-            
-        }
-        
+        self.dismiss(animated: true) {  }
     }
 }

@@ -9,9 +9,10 @@
 #import "RITLWidgetTodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
 #import "RITL_FrameWork_Object.h"
-
 //导入Swift共享代码
-@import RITLKit;
+@import RITLKIt_Swift;
+
+
 
 @interface RITLWidgetTodayViewController () <NCWidgetProviding>
 
@@ -29,6 +30,7 @@
     //共享代码的测试
     [RITL_FrameWork_Object sayHello];
     [RITL_Framework_Swift_Object sayHello];
+//    RITL_Framework_Swift_Object
 
     //如果不是storyboard,记得设置VC大小
 //    self.preferredContentSize = CGSizeMake(0, 200);
@@ -38,10 +40,13 @@
     
     
     
-#ifdef __IPHONE_10_0
+//#ifdef __IPHONE_10_0
+    if (@available(iOS 10.0,*)){
+        self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded;
+    }
     //如果需要折叠
-    self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded;
-#endif
+
+//#endif
     
 }
 
@@ -95,10 +100,10 @@
     }
 }
 
-#ifdef __IPHONE_10_0
+//#ifdef __IPHONE_10_0
 
 // available NS_AVAILABLE_IOS(10_0)
-- (void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize
+- (void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize NS_AVAILABLE_IOS(10.0)
 {
     switch (activeDisplayMode)
     {
@@ -119,8 +124,11 @@
     }
 }
 
-#else
+//#else
 
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 // 表示当前widget的内嵌边距，如果不设置，那么返回的就是默认的defaultMarginInsets，不过在iOS10以及以后就不会再调用该方法了
 // Widgets wishing to customize the default margin insets can return their preferred values.
 // Widgets that choose not to implement this method will receive the default margin insets.
@@ -130,7 +138,8 @@
     return UIEdgeInsetsMake(0, 20, 0, 0);//随便写一下
 }
 
-#endif
+#pragma clang diagnostic pop
+//#endif
 
 
 

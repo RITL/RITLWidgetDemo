@@ -11,7 +11,7 @@
 #import "RITL_FrameWork_Object.h"
 
 //导入Swift共享代码
-@import RITLKit;
+@import RITLKIt_Swift;
 
 
 @interface RITLWidgetMainViewController ()

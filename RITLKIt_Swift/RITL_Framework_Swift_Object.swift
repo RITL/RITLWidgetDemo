@@ -9,10 +9,9 @@
 import UIKit
 
 /// SWift共享的代码
-class RITL_Framework_Swift_Object: NSObject {
-
-    public class func sayHello()
-    {
+public final class RITL_Framework_Swift_Object: NSObject {
+    
+    @objc public static func sayHello() {
         print("SWift共享的代码 说Hello")
     }
 }
